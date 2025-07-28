@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Petrobras</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="image-section">
+            <img src="https://petrobras.com.br/documents/d/f3a44542-113e-11ee-be56-0242ac120002/o-que-e-petrobras" alt="Petrobras">
+        </div>
+        <div class="form-section">
+            <h2>Acesso</h2>
+            <form id="form-login">
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                </div>
+                <div class="form-group">
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                        <button type="button" id="toggle-password">👁️</button>
+                    </div>
+                </div>
+                
+                <!-- Botão correto de envio do formulário -->
+                <button type="submit">Entrar</button>
+
+                <p class="register">Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

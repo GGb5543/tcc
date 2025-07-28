@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Créditos - Galeria</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('IMGS/Copilot_20250728_105357.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: white;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+
+    .top-button {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      z-index: 2;
+      background-color: #304d18;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .top-button:hover {
+      background-color: #f7d024;
+      color: black;
+    }
+
+    .content {
+      padding: 80px 20px 40px;
+      position: relative;
+      z-index: 1;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    .galeria {
+      display: flex;
+      gap: 20px;
+      perspective: 800px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .galeria img {
+      width: 220px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+      transform: rotateY(-10deg);
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: rotateY(0deg) scale(1.05);
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="tela inicial.html" class="top-button">⟵ Voltar ao início</a>
+
+  <div class="content">
+    <main>
+      <h1>Créditos</h1>
+
+      <div class="galeria">
+        <img src="IMGS/BRUNO.jpeg" alt="Fernando">
+        <img src="IMGS/CABRAL.jpeg" alt="Pedro">
+        <img src="IMGS/ENDREW.jpeg" alt="Giovanne">
+        <img src="IMGS/FERNANDO.jpeg" alt="Bruno">
+        <img src="IMGS/GIOVANNE.jpeg" alt="Endrew">
+      </div>
+
+      <footer>
+        © 2025 Trabalho de Conclusão de Curso (TCC)
+      </footer>
+      <footer>
+        Aprendizes do Cassio Tadeu Ribeiro
+      </footer>
+    </main>
+  </div>
+
+</body>
+</html>

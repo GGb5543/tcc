@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Seção da imagem -->
+      <div class="image-section">
+        <img
+          src="https://www.gov.br/secom/pt-br/fatos/brasil-contra-fake/noticias/2025/04/paginas-suspeitas-divulgam-falso-concurso-da-petrobras/concurso_nivel_tecnico.png"
+          alt="Imagem"
+        />
+      </div>
+
+      <!-- Seção do formulário -->
+      <div class="form-section">
+        <h2>Cadastro</h2>
+        <form id="cadastroForm">
+<!-- Nome -->
+<div class="form-group">
+  <input
+    type="text"
+    id="nome"
+    name="nome"
+    placeholder="Escreva seu nome completo"
+    required
+  />
+  <span class="mensagem-campo"></span>
+</div>
+
+<!-- E-mail -->
+<div class="form-group">
+  <input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="Digite seu e-mail"
+    required
+  />
+  <span class="mensagem-campo"></span>
+</div>
+
+<div class="form-group">
+  <input
+    type="tel"
+    id="telefone"
+    name="telefone"
+    placeholder="Telefone (com DDD)"
+    required
+    title="Digite um telefone válido com DDD"
+  />
+  <span class="mensagem-campo"></span>
+</div>
+
+
+<!-- Senha -->
+<div class="form-group">
+  <div class="password-wrapper">
+    <input
+      type="password"
+      id="senha"
+      name="senha"
+      placeholder="Crie uma senha"
+      required
+    />
+    <button type="button" id="toggle-password">👁️</button>
+  </div>
+  <span class="mensagem-campo"></span>
+</div>
+
+<!-- Confirmar Senha -->
+<div class="form-group">
+  <div class="password-wrapper">
+    <input
+      type="password"
+      id="confirmarSenha"
+      name="confirmarSenha"
+      placeholder="Confirme sua senha"
+      required
+    />
+    <button type="button" id="toggle-confirmar">👁️</button>
+  </div>
+  <span class="mensagem-campo"></span>
+</div>
+
+
+          <!-- Data de Nascimento -->
+          <div class="form-group">
+            <label for="dataNascimento">Data de Nascimento:</label>
+            <div class="data-nascimento">
+              <select id="diaNascimento" name="diaNascimento" required>
+                <option value="">Dia</option>
+              </select>
+              <select id="mesNascimento" name="mesNascimento" required>
+                <option value="">Mês</option>
+                <option value="1">Janeiro</option>
+                <option value="2">Fevereiro</option>
+                <option value="3">Março</option>
+                <option value="4">Abril</option>
+                <option value="5">Maio</option>
+                <option value="6">Junho</option>
+                <option value="7">Julho</option>
+                <option value="8">Agosto</option>
+                <option value="9">Setembro</option>
+                <option value="10">Outubro</option>
+                <option value="11">Novembro</option>
+                <option value="12">Dezembro</option>
+              </select>
+              <select id="anoNascimento" name="anoNascimento" required>
+                <option value="">Ano</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Gênero -->
+          <div class="form-group">
+            <label for="genero">Gênero:</label>
+            <select id="genero" name="genero" required>
+              <option value="">Selecione...</option>
+              <option value="Masculino">Masculino</option>
+              <option value="Feminino">Feminino</option>
+            </select>
+          </div>
+          <!-- Tipo de Veículo -->
+<div class="form-group">
+  <!-- Tipo de Veículo (agora com select) -->
+<div class="form-group">
+  <label for="modeloVeiculo">Modelo do Caminhão:</label>
+  <select id="modeloVeiculo" name="modeloVeiculo" required>
+    <option value="">Selecione o modelo</option>
+    <option value="Volkswagen Constellation">Volkswagen Constellation</option>
+    <option value="Scania R450">Scania R450</option>
+    <option value="Volvo FH 540">Volvo FH 540</option>
+    <option value="Mercedes-Benz Actros">Mercedes-Benz Actros</option>
+    <option value="Iveco Hi-Way">Iveco Hi-Way</option>
+    <option value="DAF XF">DAF XF</option>
+  </select>
+  <span class="mensagem-campo"></span>
+</div>
+
+<!-- Placa do Veículo -->
+<div class="form-group">
+  <input
+    type="text"
+    id="placaVeiculo"
+    name="placaVeiculo"
+    placeholder="Formato esperado: ABC1D23 ou ABC1234"
+    required
+    title="Formato esperado: ABC1D23 ou ABC1234"
+  />
+  <span class="mensagem-campo"></span>
+</div>
+          <button type="submit">Cadastrar</button>
+          <p id="mensagemErro"></p>
+        </form>
+        <div class="register">
+          Já possui uma conta? <a href="login.html">Faça login</a>
+
+        </div>
+      </div>
+    </div>
+    <script src="cadastro.js"></script>
+  </body>
+</html>

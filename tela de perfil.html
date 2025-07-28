@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfil do Usuário</title>
+  <link rel="stylesheet" href="tes45.css" />
+</head>
+<body>
+  <style>
+    .botao-voltar,
+.botao-ida {
+  display: inline-block;
+  margin: 10px 10px 30px 0;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.botao-voltar:hover,
+.botao-ida:hover {
+  background-color: #45a049;
+}
+
+  </style>
+  <header>
+    <div class="container">
+      <h1>Perfil do Usuário</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Botões de navegação -->
+    <div class="botoes-navegacao">
+      <a href="login.html" class="botao-voltar">⟵ Voltar para Login</a>
+      <a href="tela inicial.html" class="botao-ida">Ir para Tela Inicial ⟶</a>
+    </div>
+
+    <div class="info-section">
+      <div>
+        <h3>Informações Pessoais</h3>
+        <p><strong>Nome:</strong> <span id="nome"></span></p>
+        <p><strong>Idade:</strong> <span id="idade"></span></p>
+        <p><strong>Gênero:</strong> <span id="genero"></span></p>
+      </div>
+
+      <div>
+        <h3>Contato</h3>
+        <p><strong>Telefone:</strong> <span id="telefone"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+      </div>
+
+      <div>
+        <h3>Veículo</h3>
+        <p><strong>Modelo:</strong> <span id="veiculo"></span></p>
+        <p><strong>Placa:</strong> <span id="placa"></span></p>
+      </div>
+    </div>
+
+    <div class="map-container">
+      <h3>Localização Exemplo</h3>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.506684842029!2d-46.639557185021275!3d-23.58821668466779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59bcb6e3df61%3A0x1dd78c57df6b7351!2sSenai%20SP!5e0!3m2!1spt-BR!2sbr!4v1697661163361"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Perfil do Funcionário - Petrobras</p>
+  </footer>
+
+  <script src="perfil.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+}
+
+    .background {
+      background-image: url(https://compraracciones.com/br/wp-content/uploads/sites/8/2021/12/Otimizacao-em-Tempo-Real-Industrial-CENPES-HD.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+}
+
+    .navbar {
+      width: 200px;
+      background-color: #304d18;
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+}
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+}
+    .navbar ul {
+        list-style: none;
+        padding: 0;
+}
+
+    .navbar ul li {
+        margin: 15px 0;
+}
+
+    .navbar ul li a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        transition: background-color 0.3s;
+}
+
+    .navbar ul li a:hover {
+        background-color: #f7d024;
+}
+
+    .content {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+}
+
+    .about-box {
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 30px;
+      max-width: 500px;
+      border-radius: 10px;
+      color: #304d18;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      backdrop-filter: blur(5px);
+}
+    .about-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+    @media (max-width: 768px) {
+      .background {
+        flex-direction: column;
+      }
+
+      .navbar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      .content {
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .about-box {
+        width: 90%;
+      }
+    }
+    
