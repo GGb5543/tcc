@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria Centralizada</title>
+  <style>
+    /* Estilo básico para o corpo */
+   /* Estilo básico para o corpo */
+   body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fbff0084;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+/* Barra de navegação */
+.navbar {
+  background-color: #304d18;
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 200px;
+  padding-top: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 15px 0;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+  background-color: #f7d024;
+}
+
+/* Conteúdo principal */
+.content {
+  max-width: 800px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-left: 220px;
+}
+
+/* Galeria de imagens */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.image-gallery img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  color: #fbff00;
+  background-color: #007533;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: black;
+}
+
+/* Botão */
+.but {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #0ab554;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.but:hover {
+  background-color: #0d9248;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Barra de Navegação -->
+  <div class="navbar">
+     <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="tela de perfil.html">Meu Perfil</a></li>
+            <li><a href="pesqiosaperfil.html">Perfis</a></li>
+            <li><a href="tesss (1).html">Viagens</a></li>
+            <li><a href="créditos.html">Créditos</a></li>
+        </ul>
+    </nav>
+  </div>
+
+  <!-- Conteúdo Principal -->
+ <div class="main-container">
+  <div class="content">
+    <h1>Acompanhe os caminhões em trânsito</h1>
+    <div class="image-gallery">
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.XuI_hxXIW_juiufOpXi7IAHaE8%26pid%3DApi&f=1&ipt=a888ae5d2649c9528a1cf755e45923eac3eb3482abd1b014d7d091df576b6cea&ipo=images"
+        alt="Imagem 1"
+        onclick="mostrarInfo('<ul><li>Motorista: João Silva</li><li>Placa do Caminhão: ABC2X25</li><li>Destino: São Paulo</li></ul>')">
+
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.saKksgKtgqaSs7jLhv6W6wHaEk%26pid%3DApi&f=1&ipt=b626ba0fa327375af63bbabd911f3dcccbbed90eda0d02d5a6f6de7161ec8b89&ipo=images"
+        alt="Imagem 2"
+        onclick="mostrarInfo('<ul><li>Motorista: Maria Lopes</li><li>Placa do Caminhão: DEF1K34</li><li>Destino: Belo Horizonte</li></ul>')">
+
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.WOEahdNaVXvNDzqy7BGRYQHaEF%26pid%3DApi&f=1&ipt=b3f8dda7b322d4c1a068e808e6899792a208541862afe64eca4f0790e3380113&ipo=images"
+        alt="Imagem 3"
+        onclick="mostrarInfo('<ul><li>Motorista: Pedro Santos</li><li>Placa do Caminhão: GHI9L78</li><li>Destino: Rio de Janeiro</li></ul>')">
+
+      <img src="https://static.brasilenergia.com.br/upload/sites/3/2023/01/65a17eb2045b6-770x0.jpg"
+        alt="Imagem 4"
+        onclick="mostrarInfo('<ul><li>Motorista: Ana Beatriz</li><li>Placa do Caminhão: JKL6M90</li><li>Destino: Curitiba</li></ul>')">
+    </div>
+
+    <p>Nessa aba você irá acompanhar os caminhões rodando neste momento, assim como informações adicionais sobre o veículo.</p>
+  </div>
+</div>
+
+  <!-- Modal único -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal()">&times;</span>
+      <div id="modal-content-area"></div>
+      <p id="modal-text"></p>
+    </div>
+  </div>
+
+  <!-- JavaScript Corrigido -->
+  <script>
+    function mostrarInfo(html) {
+      document.getElementById('modal-text').innerHTML = html;
+      document.getElementById('modal-content-area').innerHTML = ''; // Limpa imagem anterior
+      document.getElementById('modal').style.display = 'block';
+    }
+
+    function mostrarImagem(src, altText = '') {
+      const html = `<img src="${src}" alt="${altText}" style="width: 300px; border-radius: 8px;">`;
+      document.getElementById('modal-content-area').innerHTML = html;
+    }
+
+    function fecharModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+
+    // Fecha modal se clicar fora da caixa
+    window.onclick = function(event) {
+      const modal = document.getElementById('modal');
+      if (event.target === modal) {
+        fecharModal();
+      }
+    }
+  </script>
+
+</body>
+</html>
